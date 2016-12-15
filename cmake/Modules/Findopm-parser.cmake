@@ -52,7 +52,7 @@ endif ()
 
 # use this header as signature
 find_path (OPM_PARSER_INCLUDE_DIR
-  NAMES "opm/parser/eclipse/Parser/Parser.hpp"
+  NAMES "opm/parser/eclipse/Parser.hpp"
   HINTS "${OPM_PARSER_ROOT}"
   PATHS ${_opm_parser_source}
   PATH_SUFFIXES "include"
@@ -162,7 +162,7 @@ if (ERT_FOUND AND Boost_FOUND AND
 
   check_cxx_source_compiles (
       "#include <cstdlib>
-#include <opm/parser/eclipse/Deck/Deck.hpp>
+#include <opm/parser/eclipse/Parser.hpp>
 
 int main (void) {
    return EXIT_SUCCESS;
